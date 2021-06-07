@@ -9,6 +9,8 @@ class TwitterBot:
         self.password = password
         options = webdriver.ChromeOptions()
         options.add_experimental_option("excludeSwitches", ['enabled-logging'])
+        
+        """ aqui tu path del chromedriver """
         self.bot = webdriver.Chrome(options=options, executable_path= r'C://Python//bottwitter//chromedriver.exe')
         
     def login(self):
@@ -51,7 +53,8 @@ class TwitterBot:
 
             time.sleep(2)
 
-tb = TwitterBot('zeusdevelopers1', 'zeus16102459')
+""" aqui cambiar por tu username y tu password """
+tb = TwitterBot('#Your_Username', '#Your_password')
 tb.login()
 tb.like_tweets('python')
 
